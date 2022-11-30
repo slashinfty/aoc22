@@ -1,6 +1,3 @@
-# aoc22
-Advent of Code 2022
-
 | AoC 22 | Part 1 | Part 2 |
 |--------|--------|--------|
 | Day 01 |        |        |
