@@ -32,9 +32,5 @@ console.log(example ? `Expected: ${exampleSolution1}\nActual: ${solution1}` : `S
 
 /* Task Two */
 
-let solution2 = input.reduce((top3, curr) => {
-    const currSum = curr.reduce((sum, cur) => sum + cur, 0);
-    top3[0] = Math.max(currSum, top3[0]);
-    return top3.sort((a, b) => a - b);
-}, [0, 0, 0]).reduce((sum, curr) => sum + curr, 0);
+let solution2 = input.reduce((top3, curr) => [Math.max(curr.reduce((sum, cur) => sum + cur, 0), top3[0]), top3[1], top3[2]].sort((a, b) => a - b), [0, 0, 0]).reduce((sum, curr) => sum + curr, 0);
 console.log(example ? `Expected: ${exampleSolution2}\nActual: ${solution2}` : `Solution: ${solution2}`);
