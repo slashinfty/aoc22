@@ -3,21 +3,22 @@ const path = require('path');
 
 const example = true;
 
+const realInput = fs.readFileSync(path.resolve(__dirname, `./inputs/${path.basename(__filename).replace('.js', '')}`), 'utf-8');
+
 const exampleInput = ``.split('\n').filter(Boolean);
 
-const exampleSolution1;
+let exampleSolution1;
 
-const exampleSolution2;
+let exampleSolution2;
 
-const input =  example ? exampleInput : fs.readFileSync(path.resolve(__dirname, `./inputs/${path.basename(__filename).replace('.js', '')}`), 'utf-8').split('\n').filter(Boolean);
+const input =  (example ? exampleInput : realInput).split('\n').filter(Boolean);
 
 /* Task One */
 
-const solution1;
+let solution1;
 console.log(example ? `Expected: ${exampleSolution1}\nActual: ${solution1}` : `Solution: ${solution1}`);
 
 /* Task Two */
-/*
-const solution2;
-console.log(example ? `Expected: ${exampleSolution1}\nActual: ${solution2}` : `Solution: ${solution2}`);
-*/
+
+let solution2;
+//console.log(example ? `Expected: ${exampleSolution2}\nActual: ${solution2}` : `Solution: ${solution2}`);
