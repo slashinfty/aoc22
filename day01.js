@@ -13,7 +13,8 @@ The Elves take turns writing down the number of Calories contained by the variou
 Each Elf separates their own inventory from the previous Elf's inventory (if any) by a blank line.
 */
 
-const exampleInput = `1000
+const exampleInput = 
+`1000
 2000
 3000
 
