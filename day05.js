@@ -64,7 +64,7 @@ Finally, one crate is moved from stack 1 to stack 2:
 
 let exampleSolution1 = 'CMZ';
 
-let exampleSolution2;
+let exampleSolution2 = 'MCD';
 
 const input =  (example ? exampleInput : fs.readFileSync(path.resolve(__dirname, `./inputs/${path.basename(__filename).replace('.js', '')}`), 'utf-8'))
 .split('\n');
