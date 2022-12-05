@@ -109,7 +109,7 @@ After the rearrangement procedure completes, what crate ends up on top of each s
 */
 
 moves.forEach(move => {
-    cratesCopy[move[2] - 1] = [...cratesCopy[move[1] - 1].slice(0, move[0]).reverse(), ...cratesCopy[move[2] - 1]];
+    cratesCopy[move[2] - 1] = [...cratesCopy[move[1] - 1].slice(0, move[0]), ...cratesCopy[move[2] - 1]];
     cratesCopy[move[1] - 1].splice(0, move[0]);
 });
 let solution2 = cratesCopy.reduce((str, crate) => str + crate[0], '');
