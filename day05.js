@@ -86,7 +86,7 @@ for (let i = 1; i < crateRows[0].length; i +=4) {
     })
     crates.push(crate);
 }
-const cratesCopy = [...crates];
+const cratesCopy = structuredClone(crates);
 const moves = input.slice(firstMove).map(x => x.match(/\d+/g).map(y => parseInt(y)));
 moves.forEach(move => {
     crates[move[2] - 1] = [...crates[move[1] - 1].slice(0, move[0]).reverse(), ...crates[move[2] - 1]];
