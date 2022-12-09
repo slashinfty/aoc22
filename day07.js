@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const example = true;
+const example = false;
 
 /* SITUATION */
 /*
