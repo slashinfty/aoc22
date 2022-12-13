@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const example = true;
+const example = false;
 
 /* SITUATION */
 /*
@@ -62,7 +62,8 @@ do {
             let bestPath = true;
             if (paths.some(p => p.indexOf(node) > -1)) {
                 let oldPath = paths.find(p => p.indexOf(node) > -1);
-                if (oldPath.length <= newPath.length) {
+                let slicedPath = oldPath.slice(0, oldPath.indexOf(node) + 1);
+                if (slicedPath.length <= newPath.length) {
                     bestPath = false;
                 } else {
                     paths[paths.findIndex(p => p.indexOf(node) > -1)] = undefined;
@@ -70,7 +71,8 @@ do {
             }
             if (pathsToEvaluate.some(p => p.indexOf(node) > -1)) {
                 let oldPath = pathsToEvaluate.find(p => p.indexOf(node) > -1);
-                if (oldPath.length <= newPath.length) {
+                let slicedPath = oldPath.slice(0, oldPath.indexOf(node) + 1);
+                if (slicedPath.length <= newPath.length) {
                     bestPath = false;
                 } else {
                     pathsToEvaluate[pathsToEvaluate.findIndex(p => p.indexOf(node) > -1)] = undefined;
